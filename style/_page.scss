@@ -6,13 +6,14 @@
 }
 
 .page-container{
+  overflow-x: auto;
   position: relative;
-  top: 10%;
+  top: 5%;
   left: 50%;
   transform:translate(-50%);
   box-sizing: border-box;
   padding: .5em;
-  height: 80%;
+  height: 86%;
   border-bottom: 2px solid royalblue;
   width: 90%;
   -webkit-transform:translate(-50%);
@@ -69,6 +70,31 @@
   padding: .5em;
   margin: .5em;
   color : #FFF;
+}
+
+@keyframes blink{
+  0% {
+    opacity: 0.6;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0.6;
+  }
+}
+.scroll-hint{
+  display: none;
+  height: 2vh;
+  margin: 0 auto;
+  animation: blink 1s infinite;
+  -webkit-animation: blink 1s infinite;
+}
+
+@media(max-width : 1000px){
+  .scroll-hint{
+    display: block;
+  }
 }
 
 

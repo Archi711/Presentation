@@ -14,11 +14,13 @@ export default class App extends React.Component {
   }
   toggleBg = () => this.setState(prev =>{return { bg: !prev.bg }})
 
-
+  componentDidMount(){
+    bgController(this.canvas.current)(1);
+    window.addEventListener('resize', bgController(this.canvas.current));
+  }
   componentDidUpdate(){
     if(this.state.bg){
-      window.addEventListener('resize', bgController(this.canvas.current));
-      bgController(this.canvas.current)();
+      bgController(this.canvas.current)(0);
     }
     else{
       bgController(this.canvas.current)(1);

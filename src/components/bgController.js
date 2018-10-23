@@ -1,6 +1,7 @@
 
 const MAX_PARTICLES = 20;
 let PARTICLES = [];
+let ANIM = 0;
 
 const random = (f, t) => Math.floor(Math.random() * t) + f; 
 class Point{
@@ -29,15 +30,13 @@ export default function(cvs){
     canvas = cvs;
     canvas.width = document.body.clientWidth;
     canvas.height = document.body.clientHeight;
-    if(!start){
-      clear();
-      const ctx = canvas.getContext('2d');
-      animi(ctx, canvas.width, canvas.height);
-    }
+    clear();
+    const ctx = canvas.getContext('2d');
+    animi(ctx, canvas.width, canvas.height, start);
   }
 }
 
-const animi = (ctx, w, h) => {
+const animi = (ctx, w, h, start) => {
   ctx.fillStyle = 'rgba(255,255,255,0.4)';
   PARTICLES = [];
   for(let count = 0; count < MAX_PARTICLES; count++){
@@ -46,12 +45,12 @@ const animi = (ctx, w, h) => {
   PARTICLES.forEach(p => {
     ctx.fillRect(p.x, p.y, 2,2);
   })
-  blink(ctx);
+  blink(ctx, start);
 }
 
 
 
-const blink = ctx => {
+const blink = (ctx, start) => {
   const blink_up = () => {
     if(alpha < 0.9){
       clear();
@@ -60,10 +59,11 @@ const blink = ctx => {
       PARTICLES.forEach(p => {
         ctx.fillRect(p.x, p.y, 2,2);
       })
-      window.requestAnimationFrame(blink_up);
+      ANIM = window.requestAnimationFrame(blink_up);
     }
+    else if(start === 1) window.cancelAnimationFrame(ANIM);
     else{
-      window.requestAnimationFrame(blink_down);
+      ANIM = window.requestAnimationFrame(blink_down);
     }
   }
   const blink_down = () => {
@@ -74,10 +74,11 @@ const blink = ctx => {
       PARTICLES.forEach(p => {
         ctx.fillRect(p.x, p.y, 2,2);
       })
-      window.requestAnimationFrame(blink_down);
+      ANIM = window.requestAnimationFrame(blink_down);
     }
+    else if(start === 1) window.cancelAnimationFrame(ANIM);
     else{
-      window.requestAnimationFrame(blink_up);
+      ANIM = window.requestAnimationFrame(blink_up);
     }
   }
   let alpha = ctx.fillStyle.split(',')[3][3]/10;
