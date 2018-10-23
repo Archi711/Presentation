@@ -1,0 +1,229 @@
+
+.home{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  bottom: 0%;
+  background-color: $bgcolor;
+  color : $textColor;
+  font-size: 1.3em;
+}
+
+
+.greetContainer{
+  box-sizing: border-box;
+  width: 85%;
+  height: 70%;
+  position: relative;
+  top: 40%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  -webkit-transform: translate(-50%,-50%);
+  -moz-transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+  -o-transform: translate(-50%,-50%);
+  border-bottom: 2px solid crimson;
+}
+
+.greet{
+  font-weight: 500;
+  margin: 0;
+  position: relative;
+  top: 10%;
+  left:50%;
+  transform: translateX(-50%);
+  max-width: 80%;
+  color: $textColor;
+  font-size: 10vh;
+  padding: 2vw;
+  border-bottom: 1px solid aquamarine;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+
+.copyright{
+  position: relative;
+  bottom: -65%;
+  color : $textColor;
+  font-style: italic;
+  font-size : 2vh;
+  text-align: right;
+  padding: 1em;
+  border-right: 2px solid rgba(255, 255, 255, .4);
+}
+
+a{
+  color : chartreuse;
+  text-decoration: none;
+  &:active, &:visited{
+    color : initial;
+  }
+
+}
+
+.greet-l{
+  font-size: 2vh;
+  position: relative;
+  bottom: -50%;
+}
+
+.greet-s{
+  font-weight: 400;
+  color : $textColor;
+  font-size: .3em;
+  width: 60%;
+  padding: .2em;
+  border-bottom: 2px solid salmon;
+}
+
+
+.sender{
+  position: absolute;
+  text-align: center;
+  box-sizing: border-box;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.sender-left{
+  left: 0%;
+  bottom:50%;
+  transform: translateY(0,-50%);
+  -webkit-transform: translateY(0,-50%);
+  -moz-transform: translateY(0,-50%);
+  -ms-transform: translateY(0,-50%);
+  -o-transform: translateY(0,-50%);
+}
+.sender-bottom{
+  bottom:0%;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+.sender-right{
+  right: 0%;
+  bottom:50%;
+  transform: translateY(0,-50%);
+  -webkit-transform: translateY(0,-50%);
+  -moz-transform: translateY(0,-50%);
+  -ms-transform: translateY(0,-50%);
+  -o-transform: translateY(0,-50%);
+}
+.sender-top{
+  right: 50%;
+  top:0%;
+  transform: translate(50%);
+  -webkit-transform: translate(50%);
+  -moz-transform: translate(50%);
+  -ms-transform: translate(50%);
+  -o-transform: translate(50%);
+}
+
+.navArrow{
+  vertical-align: middle;
+  display: inline-block;
+  height: 100%;
+  width: auto;
+}
+
+.navArrow-left{
+  transform: rotate(90deg) translateY(50%);
+  -webkit-transform: rotate(90deg) translateY(50%);
+  -moz-transform: rotate(90deg) translateY(50%);
+  -ms-transform: rotate(90deg) translateY(50%);
+  -o-transform: rotate(90deg) translateY(50%);
+}
+.navArrow-right{
+  transform: rotate(-90deg) translateY(50%);
+  -webkit-transform: rotate(-90deg) translateY(50%);
+  -moz-transform: rotate(-90deg) translateY(50%);
+  -ms-transform: rotate(-90deg) translateY(50%);
+  -o-transform: rotate(-90deg) translateY(50%);
+}
+.navArrow-top{
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+}
+
+
+.lighten{
+  height: 2.5vh;
+  font-size: 2vh;
+  display: inline-block;
+  padding : .7em;
+  color : $textColor;
+  opacity : .4;
+  &:hover{
+    opacity: 1;
+    &::after, &::before{
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+}
+
+.lighten-left{
+  &:hover{
+    border-right: 2px solid $krem;
+    &::after{
+      position: relative;
+      content: attr(b);
+    }
+  }
+}
+
+.lighten-right{
+  &:hover{
+    border-left: 2px solid $krem;
+    &::before{
+      position: relative;
+      content: attr(b);
+    }
+  }
+}
+
+.lighten-bottom{
+  height: auto;
+  img{
+    height: 2.5vh;
+  }
+  &:hover{
+    &::before{
+      border-top: 2px solid $krem;
+      display: block;
+      padding: .5em;
+      padding-bottom: .7em;      
+      content: attr(b);
+    }
+  }
+}
+.lighten-top{
+  &:hover{
+    &::after{
+      position: relative;
+      display: block;
+      padding: .5em;
+      padding-bottom: .7em;
+      content: attr(b);
+      border-bottom: 2px solid $krem;
+    }
+  }
+}
+
+.heading{
+  text-align: center;
+}
+
+
+ 

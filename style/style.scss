@@ -1,0 +1,116 @@
+@import 'page';
+@import 'variables';
+@import 'home';
+@import 'contact';
+
+html, body{
+  margin: 0;
+  padding: 0;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow: hidden;
+  font-family : Roboto;
+  position: relative;
+  box-sizing: border-box;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none; 
+  -khtml-user-select: none; 
+  -moz-user-select: none; 
+  -ms-user-select: none;
+  user-select: none;
+  background-color: #212121;
+}
+
+main.app{ 
+  background-color: $bgcolor;
+  width: 100vw;
+  height: 100vh;
+}
+
+div.switch{
+  z-index: 1;
+  color : #FFF;
+  position: fixed;
+  text-align: center;
+  font-size: .9em;
+  padding: .3em;
+  top: 2%;
+  right: 3%;
+  border-bottom: 2px solid darken($color: teal, $amount: 10%);
+  opacity: 0.6;
+  transition: all .8s cubic-bezier(0.215, 0.610, 0.355, 1);
+  -webkit-transition: all .8s cubic-bezier(0.215, 0.610, 0.355, 1);
+  -moz-transition: all .8s cubic-bezier(0.215, 0.610, 0.355, 1);
+  -ms-transition: all .8s cubic-bezier(0.215, 0.610, 0.355, 1);
+  -o-transition: all .8s cubic-bezier(0.215, 0.610, 0.355, 1);
+}
+div.switch-off{
+  &:hover{
+    opacity: 1;
+    border-bottom-color: maroon;
+  }
+}
+div.switch-on{
+  &:hover{
+    opacity: 1;
+    border-bottom-color: chartreuse;
+  }
+}
+
+.trans{
+  transition:all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  -webkit-transition:all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  -moz-transition:all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  -ms-transition:all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+  -o-transition:all 1s cubic-bezier(0.39, 0.575, 0.565, 1);
+}
+@keyframes text-in{
+  0% {
+    opacity: 0;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+}
+  100% {
+    opacity: 1;
+    transform: translateY(0%) ;
+    -webkit-transform: translateY(0%) ;
+    -moz-transform: translateY(0%) ;
+    -ms-transform: translateY(0%) ;
+    -o-transform: translateY(0%) ;
+}
+}
+.text-in{
+  animation: 2s text-in ;
+  -webkit-animation: 2s text-in ;
+}
+
+
+.t100{
+  top: -100%;
+}
+.b100{
+  bottom: -100%;
+}
+.r100{
+  top : 0%;
+  left : 100%;
+}
+.l100{
+  top: 0%;
+  left : -100%;
+}
+.r0 {
+  left : 0%;
+}
+.b0{
+  bottom : 0%
+}
+.l0 {
+  left : 0%;
+}
+.t0{
+  top : 0%
+}

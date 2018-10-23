@@ -1,0 +1,76 @@
+
+.form{
+  margin: 0 auto;
+  color : #FFF;
+  width: 90%;
+  height: 80%;
+  border-bottom: 2px solid crimson;
+}
+.form-in-flex{
+  padding: .5em;
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+}
+input{
+  color : #FFF;
+  background-color: rgba(255,255,255,0.2);
+  width: 50%;
+  flex: 2;
+  margin: .3em .3em;
+  padding: .8em;
+}
+textarea{
+  min-height: 10vh;
+  color : #FFF;
+  background-color: rgba(255,255,255,0.2);
+  margin: 0 auto;
+  box-sizing: border-box;
+  padding: .8em;
+  width: 100%;
+  resize: vertical;
+}
+button{
+  font-weight: 600;
+  margin: 1em auto;
+  display: block;
+  width: 30%;
+  height: auto;
+  padding: 1em;
+  color: #FFF;
+  background-color: teal;
+  transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -webkit-transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -moz-transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -ms-transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  -o-transition: all .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  &:hover{
+    color : #FFF;
+    background-color: royalblue;
+  }
+
+  &:active{
+    transform: scale(0.9)  ;
+    -webkit-transform: scale(0.9)  ;
+    -moz-transform: scale(0.9)  ;
+    -ms-transform: scale(0.9)  ;
+    -o-transform: scale(0.9)  ;
+  }
+}
+
+.cred{
+  padding: 1em;
+  color : #fff;
+  text-align: center;
+  opacity: 0.6;
+
+  &:hover{
+    opacity: 1;
+  };
+
+  a{
+    color : #FFF;
+  }
+  
+}

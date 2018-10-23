@@ -1,0 +1,74 @@
+
+.page{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+.page-container{
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform:translate(-50%);
+  box-sizing: border-box;
+  padding: .5em;
+  height: 80%;
+  border-bottom: 2px solid royalblue;
+  width: 90%;
+  -webkit-transform:translate(-50%);
+  -moz-transform:translate(-50%);
+  -ms-transform:translate(-50%);
+  -o-transform:translate(-50%);
+  text-align: center;
+}
+
+
+.page-heading{
+  color : #FFF;
+  font-size: 2em;
+  font-weight: 500;
+  padding: 1em;
+  border-bottom: 2px solid chocolate;
+  text-align: center;
+}
+
+.skills-container{
+  margin: 2em auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex : 2;
+  min-width: 30%;
+  color : #FFF;
+  padding: 1em;
+  width: 35%;
+  display: inline-block;
+  margin: .4em;
+
+}
+
+.about-flex{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-p{
+  padding: .5em;
+  flex: 1 2 4;
+  margin: .5em auto;
+  color : #FFF;
+  border-bottom: 2px solid limegreen;
+  &:nth-child(2){
+    border-bottom-color: moccasin; 
+  }
+}
+
+.about-m{
+  padding: .5em;
+  margin: .5em;
+  color : #FFF;
+}
+
+
